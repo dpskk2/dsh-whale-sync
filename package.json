@@ -1,6 +1,6 @@
 {
   "name": "dsh-whale-sync",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "DeepSeek Harness 一键同步插件:页面左下角「⟳ 同步」按钮,把会话/设置/API密钥/插件/技能同步到你的 GitHub 私有仓库,支持会话删除",
   "keywords": [
     "dsh",
@@ -19,6 +19,12 @@
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "slots"
+      ],
+      "platform": "web"
     }
   },
   "license": "MIT",
@@ -32,5 +38,10 @@
   "homepage": "https://github.com/dpskk2/dsh-whale-sync#readme",
   "engines": {
     "node": ">=20"
+  },
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
   }
 }
