@@ -1,6 +1,6 @@
 # dsh-whale-sync
 
-DeepSeek Harness 一键同步插件:页面左下角「⟳ 同步」按钮,点一下把你**全部的 DSH 数据**(会话、设置、API 密钥、插件、技能)同步到自己的 GitHub 私有仓库,多台电脑之间互相同步。内置 [鲸鱼娘余额挂件](https://github.com/MeteorNOX/DeepSeek-Balance-Whale-Widget)(作为依赖自动安装)。
+DeepSeek Harness 一键同步插件:页面左下角「⟳ 同步」按钮,点一下把你**全部的 DSH 数据**(会话、设置、API 密钥、插件、技能)同步到自己的 GitHub 私有仓库,多台电脑之间互相同步。支持**会话删除**(回收站式安全删除)。
 
 ## 安装(一行命令)
 
@@ -70,7 +70,7 @@ node "%USERPROFILE%\.dsh\profiles\web\node_modules\dsh-whale-sync\lib\cli.mjs"
 
 ## 致谢
 
-- [dsh-whale-widget](https://github.com/MeteorNOX/DeepSeek-Balance-Whale-Widget) by [@under_ocean](https://www.npmjs.com/~under_ocean)(MIT)——鲸鱼娘余额挂件,本包作为依赖集成。
+- [dsh-whale-widget](https://github.com/MeteorNOX/DeepSeek-Balance-Whale-Widget) by [@under_ocean](https://www.npmjs.com/~under_ocean)(MIT)——优秀的鲸鱼娘余额挂件,与本插件是相互独立的两个项目,可分别安装。
 - [DeepSeek Harness](https://www.npmjs.com/package/@deepseek-ai/dsh) 的插件体系让这一切只要一行命令。
 
 ## License
