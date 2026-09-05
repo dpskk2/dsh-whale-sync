@@ -12,16 +12,14 @@ dsh plugin --profile web add dsh-sync-plugin
 
 > 前置:本机装好 [git](https://git-scm.com);推送/拉取 GitHub 需要 [gh CLI](https://cli.github.com) 登录(`gh auth login`)或 Git Credential Manager 授权,首次推送时会自动引导。
 
-## 首次配置(2 分钟)
+## 首次配置(一键)
 
-1. 在 GitHub 建一个**私有**仓库(如 `dsh-sync`);
-2. 编辑 `~/.dsh/dsh-sync.json`,填入远端地址:
+装好后点一下左下角「⟳ 同步」即可,**无需手动建仓库、也无需手写配置文件**:
 
-```json
-{ "remote": "https://github.com/你的用户名/dsh-sync.git" }
-```
+1. 插件用 `gh` 取到你的 GitHub 账号,自动创建**私有**仓库(默认名 `dsh-sync`,可用配置里的 `repoName` 修改);若该名字的仓库已存在则直接复用(是公开仓库会提醒你改用私有)。
+2. 首次自动初始化本地 git 仓库,把 `remote` 写进 `~/.dsh/dsh-sync.json`,并全量推送。
 
-3. 点一下「⟳ 同步」——首次会初始化本地 git 仓库并全量推送。完成。
+> 闭环失败(如未登录 `gh`)时,本次退化为本地快照,并在日志里给出提示——不会中断,也不会弄脏数据。
 
 ## 同步什么
 
@@ -59,6 +57,10 @@ dsh plugin --profile web add dsh-sync-plugin
 | `intervalSeconds` | `300` | (auto)周期兜底 |
 | `eventDebounceSeconds` | `15` | (auto)对话结束后的去抖延迟 |
 | `minCommitIntervalSeconds` | `120` | (auto)提交节流;手动按钮不受限 |
+| `autoRepo` | `true` | 首次同步(remote 为空)时自动创建/复用 GitHub 私有仓库;设为 `false` 关闭,改回手动填 `remote` |
+| `repoName` | `dsh-sync` | 自动使用的仓库名(仅 autoRepo 且未配置 remote 时生效) |
+| `repoOwner` | `''` | 仓库所属用户名;留空则取 `gh` 登录账号 |
+| `repoDescription` | `''` | 自动创建仓库时的描述(可选) |
 
 ## 命令行(不打开 dsh 也能同步)
 
