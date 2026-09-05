@@ -2,7 +2,7 @@
 
 DeepSeek Harness 一键同步插件:页面左下角「⟳ 同步」按钮,点一下把你**全部的 DSH 数据**(会话、设置、API 密钥、插件、技能)同步到自己的 GitHub 私有仓库,多台电脑之间互相同步。支持**会话删除**(回收站式安全删除)。
 
-## 安装(一行命令)
+## 安装/更新命令
 
 ```powershell
 dsh plugin --profile web add dsh-sync-plugin
