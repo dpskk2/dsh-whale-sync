@@ -68,11 +68,6 @@ node "%USERPROFILE%\.dsh\profiles\web\node_modules\dsh-whale-sync\lib\cli.mjs"
 
 (可选:把桌面快捷方式指向它。)
 
-## 致谢
-
-- [dsh-whale-widget](https://github.com/MeteorNOX/DeepSeek-Balance-Whale-Widget) by [@under_ocean](https://www.npmjs.com/~under_ocean)(MIT)——优秀的鲸鱼娘余额挂件,与本插件是相互独立的两个项目,可分别安装。
-- [DeepSeek Harness](https://www.npmjs.com/package/@deepseek-ai/dsh) 的插件体系让这一切只要一行命令。
-
 ## License
 
 [MIT](./LICENSE) © 2026
