@@ -5,7 +5,7 @@ DeepSeek Harness 一键同步插件:页面左下角「⟳ 同步」按钮,点一
 ## 安装(一行命令)
 
 ```powershell
-dsh plugin --profile web add dsh-whale-sync
+dsh plugin --profile web add dsh-sync-plugin
 ```
 
 装完**重启 dsh**,页面左下角出现「⟳ 同步」按钮。
@@ -63,7 +63,7 @@ dsh plugin --profile web add dsh-whale-sync
 ## 命令行(不打开 dsh 也能同步)
 
 ```powershell
-node "%USERPROFILE%\.dsh\profiles\web\node_modules\dsh-whale-sync\lib\cli.mjs"
+node "%USERPROFILE%\.dsh\profiles\web\node_modules\dsh-sync-plugin\lib\cli.mjs"
 ```
 
 (可选:把桌面快捷方式指向它。)
